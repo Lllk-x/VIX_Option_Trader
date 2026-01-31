@@ -98,6 +98,11 @@ git clone https://github.com/Lllk-x/VIX_Option_Trader.git
 python -m pip install yfinance pandas numpy scipy
 ```
 
+### Change to Current Directory
+```bash
+cd VIX_Option_Trader
+```
+
 ### Today's signal
 ```bash
 python vix_options_strategy.py --mode live
