@@ -90,7 +90,7 @@ This is not risk-free. The edge, if any, typically comes from **relative value +
 
 ### Clone the Repository
 ```bash
-git clone 
+git clone https://github.com/Lllk-x/VIX_Option_Trader.git
 ```
 
 ### Install Dependencies
