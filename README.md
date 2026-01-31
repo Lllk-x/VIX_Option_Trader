@@ -86,7 +86,12 @@ This is not risk-free. The edge, if any, typically comes from **relative value +
   - `numpy`
   - `scipy`
 
-## How to use
+## Get Started
+
+### Clone the Repository
+```bash
+git clone 
+```
 
 ### Install Dependencies
 ```bash
