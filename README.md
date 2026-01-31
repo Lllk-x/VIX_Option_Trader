@@ -2,7 +2,7 @@
 
 A Python pipeline to (1) collect daily VIX option-chain snapshots from `yfinance`, (2) compute implied-volatility “wing” signals (OTM call wing vs ATM), (3) generate defined-risk VIX call-spread trades, and (4) backtest performance (return, Sharpe, drawdown) using your saved snapshots.
 
-> ⚠️ Important: `yfinance` does **not** provide historical option chain snapshots. This project solves that by saving the chain daily. Backtests use **your locally saved snapshots**.
+> ⚠️ Important: `yfinance` does **not** provide historical option chain snapshots. This project solves that by saving the chain daily. Backtests use **your locally saved snapshots**. You need to collect at least 20 days of snapshots to use the Backtest.
 
 ---
 
@@ -55,6 +55,7 @@ Strike selection:
 - `K2` ≈ OTM wing (near `m_high * F`)
 
 ### 5) Backtest
+> ⚠️ Important: You have to collect enough data (20 days) locally to run the Backtest!
 Backtests run on your snapshot history and print:
 - Total return
 - CAGR
@@ -62,7 +63,6 @@ Backtests run on your snapshot history and print:
 - Max drawdown
 - Trade logs
 
----
 
 ## Why this can work (intuition)
 
@@ -113,7 +113,15 @@ python vix_options_strategy.py --mode collect --snapshot_dir vix_snapshots
 python vix_options_strategy.py --mode backtest --snapshot_dir vix_snapshots --start 2018-01-01
 ```
 
-### Optional Tuning
+### Tuning for faster result (Not Recommended)
+
+If you don’t have enough data yet, or you want more/less trading frequency, this is adjusting lookback and z_enter.
+
 ```bash
 python vix_options_strategy.py --mode backtest --snapshot_dir vix_snapshots --lookback 5 --z_enter 0.75
 ```
+
+---
+## How to Operate?
+
+
