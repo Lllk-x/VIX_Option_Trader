@@ -120,7 +120,7 @@ python vix_options_strategy.py --mode backtest --snapshot_dir vix_snapshots --st
 
 ### Tuning for faster result (Not Recommended)
 
-If you don’t have enough data yet, or you want more/less trading frequency, this is adjusting lookback and z_enter.
+If you don’t have enough data yet, or you want more/less trading frequency, use this to adjust lookback and z_enter.
 
 ```bash
 python vix_options_strategy.py --mode backtest --snapshot_dir vix_snapshots --lookback 5 --z_enter 0.75
