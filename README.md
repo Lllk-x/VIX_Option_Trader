@@ -129,4 +129,11 @@ python vix_options_strategy.py --mode backtest --snapshot_dir vix_snapshots --lo
 ---
 ## How to Operate?
 
+Collect snapshots daily.
+Run live signal once per day.
+Only trade when z-score exceeds threshold.
+Use defined-risk call spreads.
 
+## Note
+
+To collect snapshots daily, we recommend to use Task Scheduler on your computer to do so automatically.
